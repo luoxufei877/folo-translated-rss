@@ -25,6 +25,8 @@ DEFAULT_SOURCES = ROOT / "sources.json"
 DEFAULT_OUTPUT = ROOT / "public"
 DEFAULT_CACHE = ROOT / ".cache" / "translations.json"
 USER_AGENT = "PersonalFoloTranslatedRSS/1.0"
+ATOM_NS = "http://www.w3.org/2005/Atom"
+ET.register_namespace("atom", ATOM_NS)
 
 CATEGORY_SLUGS = {
     "经济": "economy",
@@ -340,6 +342,13 @@ def build_feed(
     ET.SubElement(channel, "description").text = "标题与简介已自动翻译为中文，点击标题查看原始来源。"
     ET.SubElement(channel, "language").text = "zh-CN"
     ET.SubElement(channel, "lastBuildDate").text = format_datetime(datetime.now(timezone.utc))
+    ET.SubElement(
+        channel,
+        f"{{{ATOM_NS}}}link",
+        href=f"{public_base_url.rstrip('/')}/feeds/{slug}.xml",
+        rel="self",
+        type="application/rss+xml",
+    )
     for row in rows[:max_items]:
         title_zh, summary_zh = translated(row, cache)
         item = ET.SubElement(channel, "item")
@@ -348,7 +357,6 @@ def build_feed(
         guid = ET.SubElement(item, "guid", isPermaLink="false")
         guid.text = row.key
         ET.SubElement(item, "pubDate").text = format_datetime(row.published)
-        ET.SubElement(item, "author").text = row.source
         original = "" if title_zh == row.title else f"<p><small>原标题：{html.escape(row.title)}</small></p>"
         description = (
             f"<p>{html.escape(summary_zh)}</p>"
