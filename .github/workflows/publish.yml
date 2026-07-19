@@ -2,6 +2,8 @@ name: Build translated RSS feeds
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
   schedule:
     # UTC 03:30 / 11:30 = Beijing 11:30 / 19:30
     - cron: "30 3,11 * * *"
