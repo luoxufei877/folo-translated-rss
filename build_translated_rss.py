@@ -345,7 +345,7 @@ def build_feed(
     ET.SubElement(
         channel,
         f"{{{ATOM_NS}}}link",
-        href=f"{public_base_url.rstrip('/')}/feeds/{slug}.xml",
+        href=f"{public_base_url.rstrip('/')}/feeds/{slug}-v2.xml",
         rel="self",
         type="application/rss+xml",
     )
@@ -365,9 +365,10 @@ def build_feed(
         )
         ET.SubElement(item, "description").text = description
     ET.indent(rss, space="  ")
-    target = output / "feeds" / f"{slug}.xml"
+    target = output / "feeds" / f"{slug}-v2.xml"
     target.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(rss).write(target, encoding="utf-8", xml_declaration=True)
+    ET.ElementTree(rss).write(output / "feeds" / f"{slug}.xml", encoding="utf-8", xml_declaration=True)
 
 
 def build_opml(output: Path, public_base_url: str) -> None:
@@ -380,21 +381,22 @@ def build_opml(output: Path, public_base_url: str) -> None:
         ET.SubElement(
             parent,
             "outline",
-            text=f"{category}｜自动中文翻译",
-            title=f"{category}｜自动中文翻译",
+            text=f"{category}｜自动中文翻译 V2",
+            title=f"{category}｜自动中文翻译 V2",
             type="rss",
-            xmlUrl=f"{public_base_url.rstrip('/')}/feeds/{slug}.xml",
+            xmlUrl=f"{public_base_url.rstrip('/')}/feeds/{slug}-v2.xml",
         )
     ET.indent(opml, space="  ")
+    ET.ElementTree(opml).write(output / "folo-translated-v2.opml", encoding="utf-8", xml_declaration=True)
     ET.ElementTree(opml).write(output / "folo-translated.opml", encoding="utf-8", xml_declaration=True)
 
 
 def build_index(output: Path, grouped: dict[str, list[Article]], public_base_url: str) -> None:
     links = "\n".join(
-        f'<li><a href="feeds/{slug}.xml">{category}中文RSS</a>（{len(grouped[category])}条）</li>'
+        f'<li><a href="feeds/{slug}-v2.xml">{category}中文RSS V2</a>（{len(grouped[category])}条）</li>'
         for category, slug in CATEGORY_SLUGS.items()
     )
-    opml_link = '<p><a href="folo-translated.opml">下载Folo导入文件</a></p>' if public_base_url else ""
+    opml_link = '<p><a href="folo-translated-v2.opml">下载Folo导入文件 V2</a></p>' if public_base_url else ""
     page = f"""<!doctype html>
 <html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>可信新闻中文RSS</title><style>body{{max-width:760px;margin:48px auto;padding:0 20px;font:17px/1.7 system-ui}}a{{color:#e6502f}}</style>
