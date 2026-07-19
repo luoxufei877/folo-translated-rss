@@ -1,0 +1,262 @@
+{
+  "title": "可信信息源｜经济·科技·国际·国内",
+  "description": "2026-07-19重新筛选。A=一手官方源，A*=官方域名经Google News聚合，B=权威媒体或专业机构。",
+  "sources": [
+    {
+      "category": "经济",
+      "name": "中国经济政策与数据｜官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "只检索国务院、央行、发改委、财政部、统计局、商务部、海关、证监会、金融监管总局和外汇局官方域名。",
+      "query": "(site:gov.cn OR site:pbc.gov.cn OR site:ndrc.gov.cn OR site:mof.gov.cn OR site:stats.gov.cn OR site:mofcom.gov.cn OR site:customs.gov.cn OR site:csrc.gov.cn OR site:nfra.gov.cn OR site:safe.gov.cn) (经济 OR 政策 OR 货币 OR 财政 OR 房地产 OR 地方债 OR 金融监管 OR 就业 OR 消费 OR 工业 OR 进出口 OR 汇率 OR 数据) when:3d"
+    },
+    {
+      "category": "经济",
+      "name": "中国财经解读｜财新·第一财经·财联社·FT中文",
+      "type": "google_news_cn",
+      "trust": "B",
+      "reason": "用于解释政策和数据；媒体观点不等同于官方结论。",
+      "query": "(site:caixin.com OR site:yicai.com OR site:cls.cn OR site:ftchinese.com) (中国经济 OR 宏观政策 OR 央行 OR 财政 OR 房地产 OR 地方债 OR 就业 OR 消费 OR 进出口 OR 人民币) when:3d"
+    },
+    {
+      "category": "经济",
+      "name": "美联储公告｜官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "美联储新闻稿、利率决定和监管公告的一手来源。",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml"
+    },
+    {
+      "category": "经济",
+      "name": "美国经济数据与监管｜官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "只检索BLS、BEA、美国财政部和SEC官方域名。",
+      "query": "(site:bls.gov OR site:bea.gov OR site:treasury.gov OR site:sec.gov) (inflation OR employment OR payroll OR GDP OR income OR spending OR economic data OR financial regulation OR market regulation) when:3d"
+    },
+    {
+      "category": "经济",
+      "name": "欧洲央行公告｜官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "欧洲央行货币政策和新闻稿的一手来源。",
+      "url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "category": "经济",
+      "name": "欧盟经济政策与数据｜官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "只检索欧盟委员会、Eurostat、欧洲理事会和欧洲议会官方域名。",
+      "query": "(site:ec.europa.eu OR site:consilium.europa.eu OR site:europarl.europa.eu) (economy OR inflation OR employment OR GDP OR trade OR tariff OR industry OR energy OR economic policy) when:3d"
+    },
+    {
+      "category": "经济",
+      "name": "全球宏观与市场｜Reuters",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "路透社用于补充跨市场突发事件和专业报道。",
+      "query": "site:reuters.com (global economy OR central bank OR inflation OR interest rates OR recession OR trade OR financial markets OR Wall Street) when:2d"
+    },
+    {
+      "category": "经济",
+      "name": "美股市场｜CNBC Markets",
+      "type": "rss",
+      "trust": "B",
+      "reason": "覆盖美股主要指数、财报和市场驱动因素；评论性内容需核对原始数据。",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+    },
+    {
+      "category": "经济",
+      "name": "比特币监管｜SEC·CFTC·CME官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "只检索美国SEC、CFTC和CME官方域名中的比特币与ETF信息。",
+      "query": "(site:sec.gov OR site:cftc.gov OR site:cmegroup.com) (Bitcoin OR BTC OR spot bitcoin ETF OR crypto regulation) when:7d"
+    },
+    {
+      "category": "经济",
+      "name": "比特币新闻｜Decrypt",
+      "type": "rss",
+      "trust": "B",
+      "reason": "专业加密资产媒体；用于行业新闻，不作为监管或价格事实的唯一依据。",
+      "url": "https://decrypt.co/feed"
+    },
+    {
+      "category": "经济",
+      "name": "黄金研究｜World Gold Council",
+      "type": "rss",
+      "trust": "A",
+      "reason": "世界黄金协会的黄金需求、央行购金和市场研究。",
+      "url": "https://www.gold.org/rss.xml"
+    },
+    {
+      "category": "经济",
+      "name": "黄金市场｜Reuters·LBMA·CME",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "路透市场报道与LBMA、CME一手市场信息的定向聚合。",
+      "query": "(site:reuters.com OR site:lbma.org.uk OR site:cmegroup.com) (gold OR bullion OR central bank gold OR gold futures) when:3d"
+    },
+    {
+      "category": "经济",
+      "name": "石油数据｜美国EIA官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "美国能源信息署的产量、库存、消费和能源市场数据。",
+      "url": "https://www.eia.gov/rss/todayinenergy.xml"
+    },
+    {
+      "category": "经济",
+      "name": "石油政策与市场｜OPEC·IEA·Reuters",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "OPEC和IEA一手信息配合路透市场报道。",
+      "query": "(site:opec.org OR site:iea.org OR site:reuters.com) (oil OR crude OR OPEC OR petroleum OR oil demand OR oil supply) when:3d"
+    },
+    {
+      "category": "科技",
+      "name": "中国AI政策与产业｜官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "只检索网信办、工信部、科技部和国务院官方域名。",
+      "query": "(site:cac.gov.cn OR site:miit.gov.cn OR site:most.gov.cn OR site:gov.cn) (人工智能 OR 大模型 OR 算力 OR 芯片 OR 机器人 OR 数据治理) when:7d"
+    },
+    {
+      "category": "科技",
+      "name": "全球AI实验室与芯片公司｜官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "OpenAI、Anthropic、DeepMind、Microsoft AI、Meta AI、Hugging Face和NVIDIA官方发布。企业内容可能带有宣传属性。",
+      "query": "(site:openai.com OR site:anthropic.com OR site:deepmind.google OR site:blogs.microsoft.com OR site:ai.meta.com OR site:huggingface.co OR site:nvidia.com) (AI OR artificial intelligence OR model OR reasoning OR chip OR GPU OR compute) when:7d"
+    },
+    {
+      "category": "科技",
+      "name": "AI专业媒体｜MIT Technology Review",
+      "type": "rss",
+      "trust": "B",
+      "reason": "用于技术趋势和影响分析，区别于企业公告。",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
+    },
+    {
+      "category": "科技",
+      "name": "中国航空发动机｜官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "中国航发、航空工业、商飞、民航局和国防部官方域名，重点覆盖动力、适航和产业链。",
+      "query": "(site:aecc.cn OR site:avic.com OR site:comac.cc OR site:caac.gov.cn OR site:mod.gov.cn) (航空发动机 OR 航空动力 OR 涡扇 OR 涡轴 OR 涡桨 OR 燃气轮机 OR 适航 OR 推进系统) when:14d"
+    },
+    {
+      "category": "科技",
+      "name": "国际航空发动机｜监管与厂商官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "FAA、EASA及GE、普惠、罗罗、CFM、赛峰、MTU等官方域名。",
+      "query": "(site:faa.gov OR site:easa.europa.eu OR site:geaerospace.com OR site:prattwhitney.com OR site:rolls-royce.com OR site:cfmaeroengines.com OR site:safran-group.com OR site:mtu.de) (aircraft engine OR aero engine OR turbofan OR turboshaft OR turboprop OR propulsion OR engine certification OR engine failure OR MRO) when:14d"
+    },
+    {
+      "category": "科技",
+      "name": "航空发动机产业媒体｜FlightGlobal·Aviation Week·The Air Current",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "航空专业媒体，重点检索发动机、适航、供应链、机队与需求预测。部分文章有付费墙。",
+      "query": "(site:flightglobal.com OR site:aviationweek.com OR site:theaircurrent.com OR site:reuters.com) (aircraft engine OR turbofan OR propulsion OR engine maker OR engine supply chain OR engine MRO OR fleet forecast OR aircraft demand) when:7d"
+    },
+    {
+      "category": "科技",
+      "name": "中国航天｜官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "国家航天局、载人航天工程、中国航天科技集团和中科院官方域名。",
+      "query": "(site:cnsa.gov.cn OR site:cmse.gov.cn OR site:spacechina.com OR site:cas.cn) (航天 OR 火箭 OR 卫星 OR 载人航天 OR 月球 OR 深空探测 OR 空间科学) when:7d"
+    },
+    {
+      "category": "科技",
+      "name": "NASA新闻｜官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "NASA任务、发射和科研公告的一手来源。",
+      "url": "https://www.nasa.gov/news-release/feed/"
+    },
+    {
+      "category": "科技",
+      "name": "ESA活动｜官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "欧洲航天局任务与活动的一手来源。",
+      "url": "https://www.esa.int/rssfeed/Our_Activities"
+    },
+    {
+      "category": "科技",
+      "name": "全球航天产业｜SpaceNews",
+      "type": "rss",
+      "trust": "B",
+      "reason": "航天政策、商业航天、卫星和发射产业的专业媒体。",
+      "url": "https://spacenews.com/feed/"
+    },
+    {
+      "category": "国际",
+      "name": "国际局势｜Reuters",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "重点关注战争升级、制裁、外交与重要国家关系。",
+      "query": "site:reuters.com (war OR conflict OR ceasefire OR sanctions OR summit OR diplomatic talks OR geopolitical tensions OR China US relations OR China EU relations) when:2d"
+    },
+    {
+      "category": "国际",
+      "name": "国际局势｜Associated Press",
+      "type": "google_news_global",
+      "trust": "B",
+      "reason": "美联社用于交叉验证突发国际事件。",
+      "query": "site:apnews.com (war OR conflict OR ceasefire OR sanctions OR summit OR diplomacy OR geopolitical tensions) when:2d"
+    },
+    {
+      "category": "国际",
+      "name": "BBC World",
+      "type": "rss",
+      "trust": "B",
+      "reason": "国际政治与地区局势的综合补充来源。",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "category": "国际",
+      "name": "联合国新闻｜中文官方",
+      "type": "rss",
+      "trust": "A",
+      "reason": "联合国在战争、人道、制裁与国际合作方面的一手信息。",
+      "url": "https://news.un.org/feed/subscribe/zh/news/all/rss.xml"
+    },
+    {
+      "category": "国际",
+      "name": "中国·美国·欧盟外交｜官方",
+      "type": "google_news_global",
+      "trust": "A*",
+      "reason": "只检索中国外交部、美国国务院、欧盟对外行动署和欧洲理事会官方域名。",
+      "query": "(site:mfa.gov.cn OR site:state.gov OR site:eeas.europa.eu OR site:consilium.europa.eu) (China OR United States OR European Union OR meeting OR talks OR summit OR sanctions OR conflict OR cooperation OR 中国 OR 美国 OR 欧盟 OR 会谈 OR 访问) when:3d"
+    },
+    {
+      "category": "国内",
+      "name": "国内民生政策｜中央官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "国务院及民政、人社、住建、教育、卫健等部门官方域名。",
+      "query": "(site:gov.cn OR site:mca.gov.cn OR site:mohrss.gov.cn OR site:mohurd.gov.cn OR site:moe.gov.cn OR site:nhc.gov.cn) (民生 OR 就业 OR 养老 OR 医保 OR 教育 OR 住房 OR 生育 OR 医疗 OR 社会保障 OR 收入) when:3d"
+    },
+    {
+      "category": "国内",
+      "name": "公共安全与灾害｜中央官方",
+      "type": "google_news_cn",
+      "trust": "A*",
+      "reason": "应急管理部、国家卫健委、公安部和中国气象局等官方信息。",
+      "query": "(site:mem.gov.cn OR site:nhc.gov.cn OR site:mps.gov.cn OR site:cma.gov.cn OR site:gov.cn) (突发事件 OR 灾害 OR 地震 OR 洪水 OR 台风 OR 公共卫生 OR 事故 OR 应急响应) when:3d"
+    },
+    {
+      "category": "国内",
+      "name": "国内民生报道｜新华社·人民日报",
+      "type": "google_news_cn",
+      "trust": "B",
+      "reason": "中央媒体用于补充政策落地和重要社会事件，报道仍需与主管部门信息交叉核对。",
+      "query": "(site:xinhuanet.com OR site:people.com.cn) (民生 OR 就业 OR 教育 OR 医疗 OR 养老 OR 住房 OR 灾害 OR 公共安全 OR 社会保障) when:3d"
+    }
+  ]
+}
