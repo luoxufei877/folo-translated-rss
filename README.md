@@ -1,5 +1,7 @@
 # Folo 免费中文 RSS 桥接器
 
+[![Build translated RSS feeds](https://github.com/luoxufei877/folo-translated-rss/actions/workflows/publish.yml/badge.svg)](https://github.com/luoxufei877/folo-translated-rss/actions/workflows/publish.yml)
+
 这个项目解决两个问题：
 
 1. Folo 无法稳定抓取 Google News 搜索 RSS；流水线先抓取，再生成 Folo 可读取的静态 RSS。
@@ -16,8 +18,8 @@
 推荐使用公开 GitHub 仓库和 GitHub Pages：
 
 - Actions 每天北京时间 11:30 和 19:30 运行，电脑无需开机。
-- 在仓库 Actions secrets 中设置 `AI_API_KEY`、`AI_API_BASE`、`AI_MODEL`。
-- Pages 的 Source 设为 **GitHub Actions**。
+- 在仓库 Actions secrets 中设置 `AI_API_KEY`；API 地址和模型使用程序内置配置。
+- 工作流首次成功运行时自动启用 GitHub Pages。
 - 成功运行后，从 Pages 首页下载 `folo-translated.opml` 并导入 Folo。
 
 API 密钥不得写入代码、OPML、RSS或仓库文件。
