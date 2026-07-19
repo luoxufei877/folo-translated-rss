@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Chinese RSS feeds
         env:
-          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_API_KEY: ${{ secrets.RSS_TRANSLATE }}
         shell: bash
         run: |
           repo="${GITHUB_REPOSITORY#*/}"
