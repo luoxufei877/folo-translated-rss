@@ -42,8 +42,6 @@ jobs:
       - name: Build Chinese RSS feeds
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_API_BASE: ${{ secrets.AI_API_BASE }}
-          AI_MODEL: ${{ secrets.AI_MODEL }}
         shell: bash
         run: |
           repo="${GITHUB_REPOSITORY#*/}"
